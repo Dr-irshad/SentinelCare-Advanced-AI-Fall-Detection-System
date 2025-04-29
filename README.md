@@ -1,5 +1,7 @@
 # SentinelCare: Advanced AI Fall Detection System
 
+**Collaborators**:  [Dr-Irshad Ibrahim](https://github.com/Dr-irshad) and [Umar Farooq](https://github.com/imumarfarooq)
+
 ## Overview
 
 SentinelCare is an advanced AI-powered fall detection system utilizing pose estimation techniques to identify and alert for falls in real time. This system is designed for use in healthcare facilities, elderly care homes, and smart surveillance applications to enhance safety and response times.
