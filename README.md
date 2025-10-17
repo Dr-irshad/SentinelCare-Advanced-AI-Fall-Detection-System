@@ -54,37 +54,10 @@ It is designed for **healthcare facilities**, **elderly homes**, and **smart sur
 
 ## 🏗️ System Architecture
 
-```
-        ┌────────────────────┐
-        │   Camera Input     │
-        └────────┬───────────┘
-                 │
-                 ▼
-        ┌────────────────────┐
-        │  Pose Estimation    │
-        │ (OpenPose / Blaze)  │
-        └────────┬───────────┘
-                 │
-                 ▼
-        ┌────────────────────┐
-        │ Fall Detection ML  │
-        │  (SVM / LSTM / CNN)│
-        └────────┬───────────┘
-                 │
-                 ▼
-        ┌────────────────────┐
-        │  Alert System      │
-        │ (Email / SMS / IoT)│
-        └────────┬───────────┘
-                 │
-                 ▼
-        ┌────────────────────┐
-        │ Dashboard (Optional)│
-        │  Web / Cloud UI     │
-        └────────────────────┘
-```
+![System Architecture](data/Archiecture.png)
 
-> 🖼️ A modern visual diagram version will soon be available.
+
+> The SentinelCare architecture processes live or recorded video streams through pose estimation models and intelligent fall detection algorithms, followed by alert dispatch via IoT or messaging services.
 
 ---
 
