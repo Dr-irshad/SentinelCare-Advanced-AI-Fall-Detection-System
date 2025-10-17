@@ -1,85 +1,183 @@
-# SentinelCare: Advanced AI Fall Detection System
+# 🛡️ SentinelCare: Advanced AI Fall Detection System  
 
-**Collaborators**: [Dr. Irshad Ibrahim](https://github.com/Dr-irshad) and [Umar Farooq](https://github.com/imumarfarooq)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
+![Status](https://img.shields.io/badge/Status-Research--Preview-yellow)
+![Platform](https://img.shields.io/badge/Platform-Edge%20%7C%20Cloud-green)
+![License](https://img.shields.io/badge/License-Restricted--Educational-lightgrey)
+![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen)
 
-## Overview
+![Stars](https://img.shields.io/github/stars/Dr-irshad/SentinelCare-Advanced-AI-Fall-Detection-System?style=social)
+![Forks](https://img.shields.io/github/forks/Dr-irshad/SentinelCare-Advanced-AI-Fall-Detection-System?style=social)
+![Issues](https://img.shields.io/github/issues/Dr-irshad/SentinelCare-Advanced-AI-Fall-Detection-System)
+![Contributors](https://img.shields.io/github/contributors/Dr-irshad/SentinelCare-Advanced-AI-Fall-Detection-System)
 
-SentinelCare is an advanced AI-powered fall detection system utilizing pose estimation techniques to identify and alert for falls in real-time. This system is designed for use in healthcare facilities, elderly care homes, and smart surveillance applications to enhance safety and response times.
+---
 
-## Features
+## 👥 Collaborators
 
-- **Real-Time Fall Detection**: Uses pose estimation models to identify abnormal postures indicative of falls.
-- **High Accuracy**: Implements state-of-the-art deep learning models such as OpenPose, BlazePose, or MediaPipe Pose.
-- **Edge & Cloud Deployment**: Works on edge devices like Raspberry Pi or cloud-based solutions for scalable applications.
-- **Alerts & Notifications**: Sends alerts via email, SMS, or IoT-integrated platforms (e.g., AWS, Firebase, MQTT).
-- **Customizable Sensitivity**: Adjustable thresholds for fall detection to reduce false positives.
-- **Privacy-Preserving**: Uses skeletal representation instead of raw video footage to ensure privacy.
+- [Dr. Irshad Ibrahim](https://github.com/Dr-irshad)
+- [Umar Farooq](https://github.com/imumarfarooq)
 
-## Technologies Used
+---
 
-- **Programming Languages**: Python
-- **Frameworks & Libraries**:
-  - TensorFlow / PyTorch
-  - OpenPose / MediaPipe / BlazePose
-  - OpenCV
-  - NumPy, Pandas
-  - Flask / FastAPI (for API integration)
-  - MQTT / Firebase / Twilio (for alerts)
+## 🧠 Overview
 
-## System Architecture
+**SentinelCare** is an **AI-powered fall detection system** that utilizes **pose estimation** and **machine learning** to detect falls and alert caregivers in real time.  
+It is designed for **healthcare facilities**, **elderly homes**, and **smart surveillance** systems, focusing on **safety**, **privacy**, and **response efficiency**.
 
-1. **Video Input**: Live camera feed or pre-recorded video.
-2. **Pose Estimation Model**: Extracts skeletal keypoints from the video.
-3. **Fall Detection Algorithm**:
-   - Checks body orientation, velocity, and impact detection.
-   - Uses machine learning classifiers (e.g., SVM, CNN, LSTM) for improved accuracy.
-4. **Alert System**: Notifies caregivers through SMS, email, or IoT integration.
-5. **Dashboard (Optional)**: Web-based UI for monitoring fall events in real-time.
+---
 
-## Installation
+## ✨ Key Features
+
+- 🚨 **Real-Time Fall Detection** – Detects abnormal human postures through pose estimation.
+- 🎯 **High Accuracy** – Powered by cutting-edge models (OpenPose, BlazePose, MediaPipe).
+- 🧩 **Edge & Cloud Compatible** – Deploy on Raspberry Pi, Jetson Nano, or cloud servers.
+- 📢 **Smart Alerts** – Notifies via Email, SMS, or IoT (MQTT, Firebase).
+- ⚙️ **Adjustable Sensitivity** – Customize thresholds to reduce false positives.
+- 🔒 **Privacy-Preserving** – Uses skeletal keypoints instead of raw video.
+
+---
+
+## 🧰 Technologies Used
+
+| Category | Tools & Frameworks |
+|-----------|-------------------|
+| **Language** | Python |
+| **Deep Learning** | TensorFlow, PyTorch |
+| **Pose Estimation** | OpenPose, BlazePose, MediaPipe |
+| **Computer Vision** | OpenCV |
+| **Web Frameworks** | Flask, FastAPI |
+| **Messaging / IoT** | MQTT, Firebase, Twilio |
+| **Data Processing** | NumPy, Pandas |
+
+---
+
+## 🏗️ System Architecture
+
+```
+        ┌────────────────────┐
+        │   Camera Input     │
+        └────────┬───────────┘
+                 │
+                 ▼
+        ┌────────────────────┐
+        │  Pose Estimation    │
+        │ (OpenPose / Blaze)  │
+        └────────┬───────────┘
+                 │
+                 ▼
+        ┌────────────────────┐
+        │ Fall Detection ML  │
+        │  (SVM / LSTM / CNN)│
+        └────────┬───────────┘
+                 │
+                 ▼
+        ┌────────────────────┐
+        │  Alert System      │
+        │ (Email / SMS / IoT)│
+        └────────┬───────────┘
+                 │
+                 ▼
+        ┌────────────────────┐
+        │ Dashboard (Optional)│
+        │  Web / Cloud UI     │
+        └────────────────────┘
+```
+
+> 🖼️ A modern visual diagram version will soon be available.
+
+---
+
+## ⚙️ Installation
 
 ### Prerequisites
 
-Ensure you have the following installed:
-- Python 3.8+
-- Virtual environment (optional but recommended)
+- Python ≥ 3.8  
+- (Optional) Virtual environment  
 
 ### Setup
 
-```sh
-# Clone the repository
+```bash
+# Clone repository
 git clone https://github.com/Dr-irshad/SentinelCare-Advanced-AI-Fall-Detection-System.git
 cd SentinelCare-Advanced-AI-Fall-Detection-System
 
-# Create virtual environment
+# Create and activate virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
+```
 
-Dataset
-You can use publicly available fall detection datasets such as:
+---
 
-UR Fall Detection Dataset
-Le2i Fall Detection Dataset
-Fallen Person Dataset
-Deployment
-Edge Deployment (Raspberry Pi/Jetson Nano)
+## 🧪 Datasets
 
-Optimize the model using TensorFlow Lite or ONNX
-Use OpenVINO for Intel-based edge devices
-Cloud Deployment
+You can train or test the system using publicly available datasets:
 
-Deploy using AWS Lambda, Google Cloud Functions, or Azure Functions
-Integrate with cloud storage and alert systems
-Alerts & Notifications
-Email Alerts: Configurable SMTP settings
-SMS Alerts: Twilio API
-IoT Integration: MQTT, Firebase, or WebSockets
-Future Enhancements
-Deep learning-based fall classification using LSTMs
-Multi-camera support
-Integration with wearable sensors
-Contribution
-We welcome contributions! Please open an issue or submit a pull request.
+- [UR Fall Detection Dataset](https://sites.google.com/site/ufddataset/)
+- [Le2i Fall Detection Dataset](http://le2i.cnrs.fr/Fall-detection-Dataset)
+- [Fallen Person Dataset (Kaggle)](https://www.kaggle.com/datasets/)
+
+---
+
+## ☁️ Deployment Options
+
+### 🧠 Edge Devices
+- Convert models using **TensorFlow Lite** or **ONNX** for lightweight performance.
+- Optimize with **OpenVINO** on Intel-based systems.
+
+### 🌐 Cloud Infrastructure
+- Deploy via **AWS Lambda**, **Google Cloud Functions**, or **Azure Functions**.
+- Integrate with cloud storage and IoT alert systems.
+
+---
+
+## 🔔 Alerts & Notifications
+
+| Type | Integration |
+|------|--------------|
+| **Email** | SMTP configuration |
+| **SMS** | Twilio API |
+| **IoT / Messaging** | MQTT, Firebase, or WebSockets |
+
+---
+
+## 🚀 Future Enhancements
+
+- 🧬 Deep learning–based fall classification (LSTM / Transformer)
+- 🎥 Multi-camera coordination for larger coverage
+- ⌚ Integration with wearable IMU sensors
+- 📊 Cloud dashboard with real-time analytics and logs
+
+---
+
+## 🤝 Contribution
+
+Contributions are welcome!  
+To contribute:
+
+1. **Fork** this repository  
+2. **Create** a feature branch (`feature/your-feature`)  
+3. **Commit** your changes  
+4. **Open** a Pull Request  
+
+For discussions or suggestions, please open an **issue**.
+
+---
+
+## 📜 License & Notice
+
+This repository provides **architectural and research documentation only**.  
+All proprietary code developed under **FLAIR** remains confidential.  
+Shared content is for **educational and research purposes** only.
+
+---
+
+### 🩺 About the Project
+
+> **SentinelCare** is a collaborative AI research initiative exploring real-time human activity recognition for safety monitoring.  
+> Developed with expertise in **computer vision**, **deep learning**, and **IoT-based alert systems**.  
+>  
+> This repository showcases the **design architecture**, **methodology**, and **deployment framework** — not proprietary implementation code.
